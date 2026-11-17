@@ -1,0 +1,12 @@
+// Problem 8 in the supplied list repeats Problem 5; same LeetCode solution.
+class Solution {
+    public int countDigits(int num) {
+        int original = num, count = 0;
+        while (num > 0) {
+            int digit = num % 10;
+            if (digit != 0 && original % digit == 0) count++;
+            num /= 10;
+        }
+        return count;
+    }
+}
